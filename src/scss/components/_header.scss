@@ -1,0 +1,137 @@
+.header {
+  width: clamp(200px, 100%, 1250px);
+  padding: 50px 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint($mobile) {
+    position: relative;
+    justify-content: space-between;
+    padding: 30px 20px;
+  }
+}
+
+.header__logo {
+  width: 121px;
+  height: 33px;
+  margin-right: 50px;
+}
+
+.header__nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint($mobile) {
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 75px;
+    display: none;
+    flex-direction: column;
+    background-color: $purple;
+    border-radius: 15px;
+    padding: 35px 25px;
+    margin: 0 auto;
+    z-index: 1;
+
+    &.active {
+      display: flex;
+    }
+  }
+}
+
+.header__nav {
+  @include breakpoint($mobile) {
+    width: 100%;
+    border-bottom: 1px solid $silver;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+}
+
+.header__link {
+  color: $silver;
+
+  &:hover {
+    color: $dark-purple;
+  }
+
+  @include breakpoint($mobile) {
+    color: $white;
+
+    &:hover {
+      color: darken($white, $amount: 15);
+    }
+  }
+}
+
+.header__buttons-wrapper {
+  display: flex;
+  gap: 10px;
+
+  @include breakpoint($mobile) {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.header__btn-login {
+  color: $silver;
+  padding: 10px 25px;
+  border-radius: 25px;
+
+  &:hover {
+    background-color: darken($white, $amount: 8);
+    color: $black;
+  }
+
+  @include breakpoint($mobile) {
+    width: 100%;
+    color: $white;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.header__btn-sign-in {
+  font-size: 16px;
+  padding: 10px 25px;
+
+  @include breakpoint($mobile) {
+    width: 100%;
+  }
+}
+
+.header__btn-menu {
+  display: none;
+
+  @include breakpoint($mobile) {
+    display: block;
+
+    &:hover .header__icon-menu {
+      color: $black;
+    }
+  }
+}
+
+.header__icon-menu {
+  font-size: 24px;
+  color: $silver;
+  transition: 0.3s;
+}

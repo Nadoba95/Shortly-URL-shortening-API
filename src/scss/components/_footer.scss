@@ -1,0 +1,88 @@
+.footer {
+  background-color: $dark-blue;
+  padding: 100px 20px;
+
+  @include breakpoint($mobile) {
+    padding: 50px 20px;
+  }
+}
+
+.footer__container {
+  width: clamp(200px, 100%, 1250px);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  @include breakpoint($tablet) {
+    width: clamp(200px, 100%, 605px);
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  @include breakpoint($mobile) {
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.footer__links-container {
+  display: flex;
+  gap: 100px;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.footer__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: $white;
+  margin-bottom: 30px;
+
+  @include breakpoint($mobile) {
+    font-size: 18;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include breakpoint($mobile) {
+    gap: 5px;
+    text-align: center;
+  }
+}
+
+.footer__list--row {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer__link {
+  font-size: 18px;
+  font-weight: 400;
+  color: $gray;
+
+  &:hover {
+    color: $cyan;
+  }
+
+  &:hover .footer__icon {
+    fill: $cyan;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 15px;
+  }
+}
+
+.footer__icon {
+  transition: 0.3s;
+}

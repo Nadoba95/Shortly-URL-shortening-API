@@ -1,0 +1,143 @@
+.statistics {
+  background-color: $grayish;
+}
+
+.statistics__container {
+  width: clamp(200px, 100%, 1250px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 200px 20px;
+  margin: 0 auto;
+
+  @include breakpoint($tablet) {
+    padding: 0 20px 100px 20px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 0 20px 50px 20px;
+  }
+}
+
+.statistics__title {
+  font-size: 32px;
+  color: $dark-blue;
+  margin-bottom: 20px;
+
+  @include breakpoint($mobile) {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+
+.statistics__desc {
+  font-size: 22px;
+  font-weight: 500;
+  color: $silver;
+  text-align: center;
+  max-width: 625px;
+  margin-bottom: 100px;
+
+  @include breakpoint($mobile) {
+    font-size: 16px;
+    margin-bottom: 80px;
+  }
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint($tablet) {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+}
+
+.card {
+  position: relative;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 70px 30px 20px 30px;
+  border-radius: 10px;
+  max-width: 380px;
+  z-index: 1;
+
+  @include breakpoint($tablet) {
+    align-items: center;
+    text-align: center;
+  }
+
+  @include breakpoint($mobile) {
+    gap: 10px;
+    padding: 70px 20px 20px 20px;
+  }
+}
+
+.card:nth-child(2) {
+  position: relative;
+  top: 35px;
+
+  @include breakpoint($tablet) {
+    top: 0;
+  }
+}
+
+.card:nth-child(3) {
+  position: relative;
+  top: 70px;
+
+  @include breakpoint($tablet) {
+    top: 0;
+  }
+}
+
+.card__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $dark-blue;
+
+  @include breakpoint($mobile) {
+    font-size: 20px;
+  }
+}
+
+.card__desc {
+  font-size: 18px;
+  font-weight: 500;
+  color: $silver;
+
+  @include breakpoint($mobile) {
+    font-size: 16px;
+  }
+}
+
+.card__icon-bg {
+  position: absolute;
+  top: -35px;
+  background-color: $purple;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__line {
+  width: 100%;
+  background-color: $cyan;
+  position: absolute;
+  bottom: 100px;
+  height: 10px;
+
+  @include breakpoint($tablet) {
+    width: 10px;
+    height: 700px;
+  }
+}

@@ -1,0 +1,60 @@
+%btn {
+  font-family: $poppins-family;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn {
+  @extend %btn;
+}
+
+.btn-cyan {
+  @extend %btn;
+  background-color: $cyan;
+  color: $white;
+  font-size: 22px;
+  padding: 15px 50px;
+  border-radius: 30px;
+
+  &:hover {
+    background-color: lighten($cyan, $amount: 15);
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+}
+
+.btn-purple {
+  @extend %btn;
+  background-color: lighten($purple, $amount: 15);
+  color: $white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $purple;
+  }
+
+  @include breakpoint($tablet) {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 14px;
+    padding: 8px 30px;
+    position: static;
+    order: 3;
+    align-self: flex-end;
+  }
+}

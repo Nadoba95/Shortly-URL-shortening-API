@@ -1,0 +1,26 @@
+.boost {
+  min-height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-color: $purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 0 20px;
+
+  @include breakpoint($mobile) {
+    min-height: 250px;
+    gap: 30px;
+  }
+}
+
+.boost__title {
+  font-size: 44px;
+  color: $white;
+
+  @include breakpoint($mobile) {
+    font-size: 28px;
+  }
+}

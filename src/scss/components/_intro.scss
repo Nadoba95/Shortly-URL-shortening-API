@@ -1,0 +1,61 @@
+.intro {
+  width: clamp(200px, 100%, 1250px);
+  display: flex;
+  align-items: center;
+  padding: 150px 20px 200px 20px;
+  margin: 0 auto;
+
+  @include breakpoint($tablet) {
+    padding: 50px 20px 200px 20px;
+    flex-direction: column-reverse;
+    gap: 75px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 20px 20px 200px 20px;
+    gap: 50px;
+  }
+}
+
+.intro__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1.1;
+
+  @include breakpoint($mobile) {
+    align-items: center;
+  }
+}
+
+.intro__title {
+  font-size: 86px;
+  line-height: 100px;
+  color: $dark-blue;
+
+  @include breakpoint($mobile) {
+    font-size: 42px;
+    line-height: 56px;
+    text-align: center;
+  }
+}
+
+.intro__desc {
+  font-size: 25px;
+  font-weight: 500;
+  color: $silver;
+
+  @include breakpoint($mobile) {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.intro__img-wrapper {
+  flex: 0.9;
+}
+
+.intro__img {
+  width: 100%;
+}
